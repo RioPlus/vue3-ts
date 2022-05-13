@@ -1,5 +1,6 @@
 <template>
-  <div class="logo" @click="handleEmit">
+  <!-- <div class="logo" @click="handleEmit"> -->
+    <div class="logo">
     <img src="@/assets/element-plus-icon.svg" alt="logo"/>
     <span class="title">Vue3-ts</span>
   </div>
@@ -7,14 +8,14 @@
 
 <script setup lang="ts">
 // 项目视频中只有defineProps父传子， 以下只测试子传父，不影响程序，只供学习
-interface Emits {
-  (event: "taps", name: string): void;
-}
+// interface Emits {
+//   (event: "taps", name: string): void;
+// }
 
-const emits = defineEmits<Emits>();
-const handleEmit = () => {
-  emits("taps", "zs","zh");
-};
+// const emits = defineEmits<Emits>();
+// const handleEmit = () => {
+//   emits("taps", "zs","zh");
+// };
 
 </script>
 <style lang="scss" scoped>

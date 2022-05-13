@@ -35,7 +35,7 @@ const setActiveTab =()=>{
   activeTab.value = route.path
 }
 
-const clickTab = (tab)=>{
+const clickTab = (tab:any)=>{
  console.log('tab ', tab)
  const {name} = tab.props
  router.push({
@@ -78,7 +78,7 @@ const removeTab = (targetName: string) => {
   const tabs =  JSON.parse(JSON.stringify(tabList.value))
   let activeName = activeTab.value
   if (activeName === targetName) {
-    tabs.forEach((tab: ITabe, index) => {
+    tabs.forEach((tab: ITabe, index:number) => {
       if (tab.path === targetName) {
         const nextTab = tabs[index + 1] || tabs[index - 1]
         if (nextTab) {

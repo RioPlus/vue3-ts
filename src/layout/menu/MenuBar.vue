@@ -1,5 +1,6 @@
 <template>
-  <MenuLogo class="layout-logo" v-if="!isCollapse" @taps="handleTaps(arguments,$event)" ></MenuLogo>
+  <!-- <MenuLogo class="layout-logo" v-if="!isCollapse" @taps="handleTaps(arguments,$event)" ></MenuLogo> -->
+  <MenuLogo class="layout-logo" v-if="!isCollapse"></MenuLogo>
  <el-menu
     :default-active="ActiveMenu"
     class="el-menu-vertical-demo"
@@ -27,12 +28,12 @@ const ActiveMenu = computed(()=> {
   return route.path
   })
 // ------------------ 子传父测试 -----------------------
-  const handleTaps = (param1,param2) => {
-  console.log("测试得出，子组件默认传递过来的参数，对应的是$event变量")
-  console.log("测试子组件传递上来的值为", param1 );
-  console.log("测试子组件传递上来的值为,对应$event", param2 );
+//   const handleTaps = (param1,param2) => {
+//   console.log("测试得出，子组件默认传递过来的参数，对应的是$event变量")
+//   console.log("测试子组件传递上来的值为", param1 );
+//   console.log("测试子组件传递上来的值为,对应$event", param2 );
 
-};
+// };
 // ------------------ 子传父测试 end-----------------------
 
 
