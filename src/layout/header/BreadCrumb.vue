@@ -13,13 +13,14 @@ const route = useRoute()
 const getBreadCrumb = ()=>{
     // 有meta和meta.title信息的过滤出来
     let matchs = route.matched.filter(item=> item.meta && item.meta.title)
+    console.log('matchs ', matchs)
     const first = matchs[0]
     // 第一个不是首页，构造一个
     if(first.path!=='/dashboard') {
         matchs = [{path: '/dashboard', meta: {title: '首页'}} as any].concat(matchs)
-        tabs.value = matchs
-        console.log('tabs', tabs)
     }
+    tabs.value = matchs
+
 }
 getBreadCrumb()
 
